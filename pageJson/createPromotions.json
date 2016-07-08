@@ -1,0 +1,49 @@
+{
+    "title": "Create Promotions",
+    "jsonPage": "viewPromotions",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "Banner",
+        "type": "text",
+        "tableRef": "banner",
+        "placeholder": "Enter banner",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+          "url": ""
+    },{
+        "name": "Link",
+        "type": "text",
+        "tableRef": "link",
+        "placeholder": "Enter link",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+          "url": ""
+    }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter order",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitPromotions"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewPromotions'})"
+    }],
+
+    "apiCall": {
+        "url": "promotion/save"
+    },
+
+    "sidemenu": [{
+        "url": "",
+        "anchor": "",
+        "state": "",
+        "action": ""
+    }]
+}

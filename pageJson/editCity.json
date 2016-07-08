@@ -68,11 +68,11 @@
         "stateName": "page({jsonName:'viewCity'})"
     }],
     "apiCall": {
-        "url": "product/save",
+        "url": "city/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "product/getOne",
+        "url": "city/getOne",
         "params": "_id"
     }
 }

@@ -1,0 +1,58 @@
+{
+    "title": "Create RechargeSmaashCard",
+    "jsonPage": "viewRechargeSmaashCard",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "City Name",
+        "type": "selectFromTable",
+        "tableRef": "city",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "city/getAll"
+    }, {
+        "name": "User Name",
+        "type": "selectFromTable",
+        "tableRef": "user",
+        "placeholder": "Enter user name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "user/getAll"
+    }, {
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter name",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Number",
+        "type": "text",
+        "tableRef": "number",
+        "placeholder": "Enter number",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Amount",
+        "type": "text",
+        "tableRef": "amount",
+        "placeholder": "Enter amount",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitRechargeSmaashCard"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewRechargeSmaashCard'})"
+    }],
+
+    "apiCall": {
+        "url": "recharge/save"
+    }
+}

@@ -1,40 +1,40 @@
 {
-    "title": "All Users",
+    "title": "All RechargeSmaashCard",
     "desciption": "",
     "pageType": "view",
     "fields": [{
+        "name": "City",
+        "isSort": "",
+        "tableRef": "city.name"
+    },{
+        "name": "User",
+        "isSort": "",
+        "tableRef": "user.name"
+    }, {
         "name": "Name",
         "isSort": "",
         "tableRef": "name"
-    }, {
-        "name": "Designation",
+    },{
+        "name": "Amount",
         "isSort": "",
-        "tableRef": "designation"
-    }, {
-        "name": "Points",
-        "isSort": "",
-        "tableRef": "points"
-    }, {
-        "name": "Plan",
-        "isSort": "",
-        "tableRef": "plan"
+        "tableRef": "amount"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editUser",
+        "jsonPage": "editRechargeSmaashCard",
         "fieldsToSend": ["_id"],
-        "callFindOne": "user/getOne"
+        "callFindOne": "recharge/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete User",
-        "content": "Are you sure you want to delete user?",
-        "api": "user/delete",
+        "title": "Delete Slider",
+        "content": "Are you sure you want to delete slider?",
+        "api": "recharge/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -53,9 +53,8 @@
     }],
 
     "apiCall": {
-        "url": "user/findLimited",
+        "url": "recharge/findLimited",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createUser'})"
-
+    "createButtonState": "page({jsonName:'createRechargeSmaashCard'})"
 }

@@ -21,7 +21,7 @@
         "id": "input2",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"name"
+        "model": "name"
     }, {
         "name": "Email",
         "type": "email",
@@ -30,7 +30,7 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"email"
+        "model": "email"
     }, {
         "name": "Facebook",
         "type": "text",
@@ -39,7 +39,7 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"facebook"
+        "model": "facebook"
     }, {
         "name": "Twitter",
         "type": "text",
@@ -48,7 +48,7 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"twitter"
+        "model": "twitter"
     }, {
         "name": "Designation",
         "type": "text",
@@ -57,8 +57,8 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"designation"
-    },{
+        "model": "designation"
+    }, {
         "name": "Points",
         "type": "text",
         "tableRef": "points",
@@ -66,14 +66,14 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"points"
+        "model": "points"
     }, {
         "name": "Access Level",
         "type": "select",
         "tableRef": "accesslevel",
         "placeholder": "Enter status",
         "id": "input3",
-        "model":"accesslevel",
+        "model": "accesslevel",
         "validation": ["required", "trim", "unique"],
         "url": [{
             "value": "Admin",
@@ -92,7 +92,7 @@
         "placeholder": "Enter status",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
-        "model":"status",
+        "model": "status",
         "url": [{
             "value": true,
             "name": "Enable"
@@ -108,7 +108,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"password"
+        "model": "password"
     }],
     "action": [{
         "name": "submit",
@@ -125,25 +125,5 @@
     "preApi": {
         "url": "user/getOne",
         "params": "_id"
-    },
-    "sidemenu": [{
-        "name": "User Details",
-        "action": "sidemenuRedirect",
-        "jsonPage": "editUser",
-        "fieldsToSend": [1],
-        "callFindOne": "user/getOne"
-    }, {
-        "name": "Cart Details",
-        "action": "sidemenuRedirect",
-        "jsonPage": "viewCart",
-        "fieldsToSend": [1],
-        "callFindOne": "user/getCart"
-
-    }, {
-        "name": "Wishlist",
-        "action": "sidemenuRedirect",
-        "jsonPage": "viewWishlist",
-        "fieldsToSend": [1],
-        "callFindOne": "user/getOne"
-    }]
+    }
 }

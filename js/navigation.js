@@ -1,4 +1,5 @@
 var adminurl = "http://localhost:1337/";
+// var adminurl = "http://192.168.0.106:1337/";
 // var adminurl = "http://104.199.151.75/";
 var imgurl = adminurl + "upload/";
 var uploadurl = imgurl;
@@ -12,44 +13,34 @@ var navigationservice = angular.module('navigationservice', [])
         link: "#/page/userView",
         subnav: []
     }, {
-        name: "Category",
+        name: "City",
         classis: "active",
-        link: "#/page/viewCategory",
+        link: "#/page/viewCity",
         subnav: []
     }, {
-        name: "Subcategory",
+        name: "Slider",
         classis: "active",
-        link: "#/page/viewSubcategory",
+        link: "#/page/viewSlider",
         subnav: []
     }, {
-        name: "Product",
+        name: "Config",
         classis: "active",
-        link: "#/page/viewProduct",
+        link: "#/page/viewConfig",
         subnav: []
     }, {
-        name: "Order",
+        name: "ExploreSmaash",
         classis: "active",
-        link: "#/page/viewOrder",
+        link: "#/page/viewExploreSmaash",
         subnav: []
     }, {
-        name: "Celebrity choice",
+        name: "Promotions",
         classis: "active",
-        link: "#/page/viewCelebritychoice",
+        link: "#/page/viewPromotions",
         subnav: []
     }, {
-        name: "Size",
+        name: "RechargeSmaashCard",
         classis: "active",
-        link: "#/page/viewSize",
-        subnav: []
-    }, {
-        name: "Testimonial",
-        classis: "active",
-        link: "#/page/viewTestimonial",
-        subnav: []
-    }, {
-        name: "Delivery Time",
-        classis: "active",
-        link: "#/page/viewProducttime",
+        link: "#/page/viewRechargeSmaashCard",
         subnav: []
     }];
 
@@ -85,13 +76,13 @@ var navigationservice = angular.module('navigationservice', [])
             $http.post(adminurl + apiName).success(successCallback).error(errorCallback);
         },
         submitLogin: function(data, successCallback, errorCallback) {
-          $http.post(adminurl + "register/login", data).success(successCallback).error(errorCallback);
+            $http.post(adminurl + "register/login", data).success(successCallback).error(errorCallback);
         },
         deleteApi: function(data, successCallback, errorCallback) {
-          $http.post(adminURL + "api/delete", data).success(successCallback).error(errorCallback);
+            $http.post(adminURL + "api/delete", data).success(successCallback).error(errorCallback);
         },
-        logout: function( successCallback, errorCallback) {
-          $http.post(adminurl + "register/logout").success(successCallback).error(errorCallback);
+        logout: function(successCallback, errorCallback) {
+            $http.post(adminurl + "register/logout").success(successCallback).error(errorCallback);
         },
         sideMenu1: function(apiName, pagination, successCallback, errorCallback) {
             $http.post(adminurl + apiName, pagination).success(successCallback).error(errorCallback);

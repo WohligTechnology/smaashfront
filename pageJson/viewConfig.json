@@ -1,40 +1,32 @@
 {
-    "title": "All Users",
+    "title": "All Config",
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "Name",
+        "name": "City",
         "isSort": "",
-        "tableRef": "name"
+        "tableRef": "city.name"
     }, {
-        "name": "Designation",
+        "name": "Url",
         "isSort": "",
-        "tableRef": "designation"
-    }, {
-        "name": "Points",
-        "isSort": "",
-        "tableRef": "points"
-    }, {
-        "name": "Plan",
-        "isSort": "",
-        "tableRef": "plan"
+        "tableRef": "url"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editUser",
+        "jsonPage": "editConfig",
         "fieldsToSend": ["_id"],
-        "callFindOne": "user/getOne"
+        "callFindOne": "configtwo/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete User",
-        "content": "Are you sure you want to delete user?",
-        "api": "user/delete",
+        "title": "Delete Config",
+        "content": "Are you sure you want to delete configtwo?",
+        "api": "configtwo/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -53,9 +45,8 @@
     }],
 
     "apiCall": {
-        "url": "user/findLimited",
+        "url": "configtwo/findLimited",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createUser'})"
-
+    "createButtonState": "page({jsonName:'createConfig'})"
 }

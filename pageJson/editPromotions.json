@@ -1,0 +1,51 @@
+{
+    "title": "Edit Promotions",
+    "jsonPage": "viewPromotions",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Banner",
+        "type": "text",
+        "tableRef": "banner",
+        "placeholder": "Enter banner",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+          "url": "",
+          "model":"banner"
+    },{
+        "name": "Link",
+        "type": "text",
+        "tableRef": "link",
+        "placeholder": "Enter link",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+          "url": "",
+          "model":"link"
+    }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter order",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model":"order"
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitPromotions"
+    }, {
+        "name": "cancel",
+        "action": "cancelPromotions",
+        "stateName": "page({jsonName:'viewPromotions'})"
+    }],
+    "apiCall": {
+        "url": "promotion/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "promotion/getOne",
+        "params": "_id"
+    }
+}

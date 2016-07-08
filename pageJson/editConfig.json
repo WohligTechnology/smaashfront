@@ -1,0 +1,42 @@
+{
+    "title": "Edit Config",
+    "jsonPage": "viewConfig",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "City Name",
+        "type": "selectFromTable",
+        "tableRef": "city",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "city/getAll",
+        "model":"city"
+    }, {
+        "name": "Url",
+        "type": "text",
+        "tableRef": "url",
+        "placeholder": "Enter url",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model":"url"
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitConfig"
+    }, {
+        "name": "cancel",
+        "action": "cancelConfig",
+        "stateName": "page({jsonName:'viewConfig'})"
+    }],
+    "apiCall": {
+        "url": "configtwo/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "configtwo/getOne",
+        "params": "_id"
+    }
+}
