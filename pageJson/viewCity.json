@@ -1,0 +1,58 @@
+{
+    "title": "All City",
+    "desciption": "",
+    "pageType": "view",
+    "fields": [{
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "name"
+        }, {
+            "name": "Order",
+            "isSort": "",
+            "tableRef": "order"
+        }, {
+            "name": "Price",
+            "isSort": "",
+            "tableRef": "price"
+        }
+
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editCity",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "city/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete City",
+        "content": "Are you sure you want to delete city?",
+        "api": "city/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "button": [{
+        "name": "excelexport",
+        "icon": "print",
+        "color": "blue",
+        "action": "excelexport"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+
+    "apiCall": {
+        "url": "city/getLimited",
+        "params": ""
+    },
+    "createButtonState": "page({jsonName:'createCity'})"
+}
