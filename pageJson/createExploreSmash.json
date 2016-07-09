@@ -154,7 +154,7 @@
     }],
 
     "apiCall": {
-        "url": "exploresmash/saveTiming"
+        "url": "exploresmash/save"
     },
 
     "sidemenu": [{

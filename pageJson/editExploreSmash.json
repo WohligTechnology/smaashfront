@@ -170,11 +170,11 @@
         "stateName": "page({jsonName:'viewExploreSmash'})"
     }],
     "apiCall": {
-        "url": "exploresmash/saveTiming",
+        "url": "exploresmash/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "exploresmash/findOneTiming",
+        "url": "exploresmash/findOne",
         "params": "_id"
     }
 }

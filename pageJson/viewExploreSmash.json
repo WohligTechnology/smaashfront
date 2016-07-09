@@ -23,7 +23,7 @@
         "action": "redirect",
         "jsonPage": "editExploreSmash",
         "fieldsToSend": ["_id"],
-        "callFindOne": "exploresmash/findOneTiming"
+        "callFindOne": "exploresmash/findOne"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -50,7 +50,7 @@
     }],
 
     "apiCall": {
-        "url": "exploresmash/findTiming",
+        "url": "exploresmash/findLimited",
         "params": ""
     },
     "createButtonState": "page({jsonName:'createExploreSmash'})"
