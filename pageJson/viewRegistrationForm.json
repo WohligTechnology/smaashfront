@@ -1,37 +1,36 @@
 {
-    "title": "All ExploreSmash",
+    "title": "All Registration Form",
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "City",
+        "name": "Name",
         "isSort": "",
-        "tableRef": "city.name"
+        "tableRef": "name"
     }, {
-        "name": "Order",
+        "name": "Email",
         "isSort": "",
-        "tableRef": "order"
-    },
-    {
-       "name": "Title",
-       "isSort": "",
-       "tableRef": "title"
-   }],
+        "tableRef": "email"
+    }, {
+        "name": "Phone",
+        "isSort": "",
+        "tableRef": "phone"
+    }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editExploreSmash",
+        "jsonPage": "editRegistrationForm",
         "fieldsToSend": ["_id"],
-        "callFindOne": "exploresmash/findOneTiming"
+        "callFindOne": "event/findOneRegistration"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Explore Smash",
-        "content": "Are you sure you want to delete explore smash?",
-        "api": "exploresmash/delete",
+        "title": "Delete RegistrationForm",
+        "content": "Are you sure you want to delete event?",
+        "api": "event/deleteRegistration",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -50,8 +49,8 @@
     }],
 
     "apiCall": {
-        "url": "exploresmash/findTiming",
+        "url": "event/findRegistration",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createExploreSmash'})"
+    "createButtonState": "page({jsonName:'createRegistrationForm'})"
 }

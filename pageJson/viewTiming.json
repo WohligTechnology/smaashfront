@@ -1,27 +1,22 @@
 {
-    "title": "All ExploreSmash",
+    "title": "All Timings",
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "City",
+        "name": "Title",
         "isSort": "",
-        "tableRef": "city.name"
+        "tableRef": "title"
     }, {
         "name": "Order",
         "isSort": "",
         "tableRef": "order"
-    },
-    {
-       "name": "Title",
-       "isSort": "",
-       "tableRef": "title"
-   }],
+    }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editExploreSmash",
+        "jsonPage": "editTiming",
         "fieldsToSend": ["_id"],
         "callFindOne": "exploresmash/findOneTiming"
     }, {
@@ -29,9 +24,9 @@
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Explore Smash",
-        "content": "Are you sure you want to delete explore smash?",
-        "api": "exploresmash/delete",
+        "title": "Delete Slider",
+        "content": "Are you sure you want to delete timing?",
+        "api": "exploresmash/deleteSmash",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -53,5 +48,5 @@
         "url": "exploresmash/findTiming",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createExploreSmash'})"
+    "createButtonState": "page({jsonName:'createTiming'})"
 }

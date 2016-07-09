@@ -1,0 +1,57 @@
+{
+    "title": "Create Registration Form",
+    "jsonPage": "viewRegistrationForm",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter name",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "email",
+        "tableRef": "email",
+        "placeholder": "Enter email",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Phone",
+        "type": "text",
+        "tableRef": "phone",
+        "placeholder": "Enter phone",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Dob",
+        "type": "text",
+        "tableRef": "dob",
+        "placeholder": "Enter dob",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitRegistrationForm"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewRegistrationForm'})"
+    }],
+
+    "apiCall": {
+        "url": "event/saveRegistration"
+    },
+
+    "sidemenu": [{
+        "url": "",
+        "anchor": "",
+        "state": "",
+        "action": ""
+    }]
+}
