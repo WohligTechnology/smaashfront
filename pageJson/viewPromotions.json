@@ -2,11 +2,7 @@
     "title": "All Promotions",
     "desciption": "",
     "pageType": "view",
-    "fields": [{
-        "name": "Banner",
-        "isSort": "",
-        "tableRef": "banner"
-    }, {
+    "fields": [ {
         "name": "Link",
         "isSort": "",
         "tableRef": "link"

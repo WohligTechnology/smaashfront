@@ -10,18 +10,13 @@
         "name": "Order",
         "isSort": "",
         "tableRef": "order"
-    }, {
-        "name": "Image",
-        "isSort": "",
-        "tableRef": "image.image",
-        "type": "image"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editSlider",
+        "jsonPage": "editStar",
         "fieldsToSend": ["_id"],
         "callFindOne": "star/getOne"
     }, {

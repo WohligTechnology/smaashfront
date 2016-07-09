@@ -10,11 +10,6 @@
         "name": "Order",
         "isSort": "",
         "tableRef": "order"
-    }, {
-        "name": "Image",
-        "isSort": "",
-        "tableRef": "image.image",
-        "type": "image"
     }],
     "action": [{
         "name": "edit",

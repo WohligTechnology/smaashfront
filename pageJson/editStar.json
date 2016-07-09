@@ -41,11 +41,11 @@
         "stateName": "page({jsonName:'viewStar'})"
     }],
     "apiCall": {
-        "url": "slider/save",
+        "url": "star/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "slider/getOne",
+        "url": "star/getOne",
         "params": "_id"
     }
 }
