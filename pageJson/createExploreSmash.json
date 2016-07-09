@@ -1,0 +1,126 @@
+{
+    "title": "Create Explore Smash",
+    "jsonPage": "viewExploreSmash",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "tableRef": "title",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter order",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "City Name",
+        "type": "selectFromTable",
+        "tableRef": "city",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "city/getAll"
+    },{
+        "name": "Text",
+        "type": "text",
+        "tableRef": "text",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+         "name": "Type",
+         "type": "select",
+         "tableRef": "type",
+         "placeholder": "Enter type",
+         "id": "input3",
+         "validation": ["required", "trim", "unique"],
+         "url": [{
+             "value": "What's new",
+             "name": "What's new"
+         }, {
+             "value": "Host a Party",
+             "name": "Host a Party"
+         }, {
+             "value": "Attraction",
+             "name": "Attraction"
+         }, {
+             "value": "Promotions",
+             "name": "Promotions"
+         }, {
+             "value": "Food and Beverages",
+             "name": "Food and Beverages"
+         }, {
+             "value": "Deals and Packages",
+             "name": "Deals and Packages"
+         }, {
+             "value": "Corporate Event",
+             "name": "Corporate Event"
+         }]
+     },{
+         "name": "Technology",
+         "type": "text",
+         "tableRef": "technology",
+         "placeholder": "Enter technology",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     },{
+         "name": "Deals",
+         "type": "text",
+         "tableRef": "deal",
+         "placeholder": "Enter deal",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     },{
+         "name": "Promotion",
+         "type": "text",
+         "tableRef": "promotion",
+         "placeholder": "Enter promotion",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     },{
+         "name": "Current Event",
+         "type": "text",
+         "tableRef": "currentevent",
+         "placeholder": "Enter current event",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     },{
+         "name": "Pdf",
+         "type": "text",
+         "tableRef": "pdf",
+         "placeholder": "Enter pdf",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     }],
+    "action": [{
+        "name": "submit",
+        "action": "submitExploreSmash"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'sliderView'})"
+    }],
+
+    "apiCall": {
+        "url": "slider/save"
+    },
+
+    "sidemenu": [{
+        "url": "",
+        "anchor": "",
+        "state": "",
+        "action": ""
+    }]
+}

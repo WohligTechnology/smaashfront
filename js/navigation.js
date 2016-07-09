@@ -30,7 +30,7 @@ var navigationservice = angular.module('navigationservice', [])
     }, {
         name: "ExploreSmaash",
         classis: "active",
-        link: "#/page/viewExploreSmaash",
+        link: "#/page/viewExploreSmash",
         subnav: []
     }, {
         name: "Promotions",
