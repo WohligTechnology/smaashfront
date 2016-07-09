@@ -130,7 +130,7 @@
          "url": ""
      },{
          "name": "Pdf",
-         "type": "text",
+         "type": "image",
          "tableRef": "pdf",
          "placeholder": "Enter pdf",
          "id": "input5",

@@ -144,7 +144,7 @@
          "url": ""
      },{
          "name": "Pdf",
-         "type": "text",
+         "type": "image",
          "tableRef": "pdf",
          "model": "pdf",
          "placeholder": "Enter pdf",
