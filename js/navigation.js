@@ -47,6 +47,11 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "#/page/viewStars",
         subnav: []
+    }, {
+        name: "Events",
+        classis: "active",
+        link: "#/page/viewEvent",
+        subnav: []
     }];
 
     return {

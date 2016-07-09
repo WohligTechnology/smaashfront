@@ -36,6 +36,14 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "placeholder": "Enter City Picture",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
          "name": "Type",
          "type": "select",
          "tableRef": "type",
@@ -65,6 +73,30 @@
              "name": "Corporate Event"
          }]
      },{
+         "name": "Description",
+         "type": "text",
+         "tableRef": "description",
+         "placeholder": "Enter description",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     },{
+         "name": "Video Url",
+         "type": "text",
+         "tableRef": "video",
+         "placeholder": "Enter video",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     },{
+         "name": "Sub Link",
+         "type": "text",
+         "tableRef": "sublink",
+         "placeholder": "Enter sublink",
+         "id": "input5",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
+     },{
          "name": "Technology",
          "type": "text",
          "tableRef": "technology",
@@ -91,7 +123,7 @@
      },{
          "name": "Current Event",
          "type": "text",
-         "tableRef": "currentevent",
+         "tableRef": "currentEvent",
          "placeholder": "Enter current event",
          "id": "input5",
          "validation": ["required", "trim", "unique"],
@@ -104,17 +136,25 @@
          "id": "input5",
          "validation": ["required", "trim", "unique"],
          "url": ""
+     },{
+         "name": "Images",
+         "type": "image",
+         "tableRef": "images",
+         "placeholder": "Enter City Picture",
+         "id": "input4",
+         "validation": ["required", "trim", "unique"],
+         "url": ""
      }],
     "action": [{
         "name": "submit",
         "action": "submitExploreSmash"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'sliderView'})"
+        "stateName": "page({jsonName:'viewExploreSmash'})"
     }],
 
     "apiCall": {
-        "url": "slider/save"
+        "url": "exploresmash/save"
     },
 
     "sidemenu": [{

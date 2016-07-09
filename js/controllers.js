@@ -227,6 +227,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.pageInfo = {};
             $scope.getMoreResults = function() {
                 NavigationService.findProjects($scope.apiName, $scope.pagination, function(findData) {
+                  console.log(findData);
                     if (findData.value != false) {
                         if (findData.data && findData.data.data && findData.data.data.length > 0) {
                             $scope.pageInfo.lastpage = findData.data.totalpages;

@@ -1,0 +1,52 @@
+{
+    "title": "All Event",
+    "desciption": "",
+    "pageType": "view",
+    "fields": [{
+        "name": "Title",
+        "isSort": "",
+        "tableRef": "title"
+    }, {
+        "name": "Order",
+        "isSort": "",
+        "tableRef": "order"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editEvent",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "event/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete Explore Smash",
+        "content": "Are you sure you want to delete explore smash?",
+        "api": "event/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "button": [{
+        "name": "excelexport",
+        "icon": "print",
+        "color": "blue",
+        "action": "excelexport"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+
+    "apiCall": {
+        "url": "event/findLimited",
+        "params": ""
+    },
+    "createButtonState": "page({jsonName:'createEvent'})"
+}
