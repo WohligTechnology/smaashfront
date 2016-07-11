@@ -143,7 +143,8 @@
          "placeholder": "Enter City Picture",
          "id": "input4",
          "validation": ["required", "trim", "unique"],
-         "url": ""
+         "url": "",
+         "model":"images"
      }],
     "action": [{
         "name": "submit",

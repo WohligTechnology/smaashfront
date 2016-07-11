@@ -52,5 +52,19 @@
         "url": "event/findRegistration",
         "params": ""
     },
+    "sidemenu": [{
+    "name":"Event Detail",
+    "action":"sidemenuRedirect",
+    "jsonPage":"editEvent",
+    "fieldsToSend":[1],
+    "callFindOne":"event/getOne"
+  },
+  {
+    "name":"Registrations",
+    "action":"sidemenuRedirect",
+    "jsonPage":"viewRegistrationForm",
+    "fieldsToSend":[1],
+    "callFindOne":"event/findRegistration"
+  }],
     "createButtonState": "page({jsonName:'createRegistrationForm'})"
 }
