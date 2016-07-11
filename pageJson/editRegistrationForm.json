@@ -54,7 +54,7 @@
         "params": "_id"
     },
     "preApi": {
-        "url": "event/getOneRegistration",
+        "url": "event/findOneRegistration",
         "params": "_id"
     }
 }

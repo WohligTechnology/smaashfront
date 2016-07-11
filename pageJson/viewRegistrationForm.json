@@ -1,57 +1,50 @@
 {
-    "title": "All Registration Form",
+    "title": "",
     "desciption": "",
     "pageType": "view",
+    "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
-        "isSort": "",
-        "tableRef": "name"
-    }, {
-        "name": "Email",
-        "isSort": "",
-        "tableRef": "email"
-    }, {
-        "name": "Phone",
-        "isSort": "",
-        "tableRef": "phone"
-    }],
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "name",
+            "type": ""
+        }, {
+            "name": "Email",
+            "isSort": "",
+            "tableRef": "email",
+            "type": ""
+        }, {
+            "name": "Phone",
+            "isSort": "",
+            "tableRef": "phone",
+            "type": ""
+        }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editRegistrationForm",
+        "jsonPage": "editRegisrationForm",
         "fieldsToSend": ["_id"],
-        "callFindOne": "event/findOneRegistration"
+        "callFindOne": "event/saveRegistration"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete RegistrationForm",
+        "title": "Delete User",
         "content": "Are you sure you want to delete event?",
-        "api": "event/deleteRegistration",
+        "api": "event/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
-    "button": [{
-        "name": "excelexport",
-        "icon": "print",
-        "color": "blue",
-        "action": "excelexport"
-    }, {
-        "name": "uploadcsv",
-        "icon": "delete",
-        "color": "red",
-        "action": "uploadcsv"
-    }],
-
     "apiCall": {
         "url": "event/findRegistration",
-        "params": ""
+        "params": "_id"
     },
+
     "sidemenu": [{
     "name":"Event Detail",
     "action":"sidemenuRedirect",
@@ -60,11 +53,10 @@
     "callFindOne":"event/getOne"
   },
   {
-    "name":"Registrations",
-    "action":"sidemenuRedirect",
-    "jsonPage":"viewRegistrationForm",
-    "fieldsToSend":[1],
-    "callFindOne":"event/findRegistration"
-  }],
-    "createButtonState": "page({jsonName:'createRegistrationForm'})"
+     "name": "Registration",
+     "action": "sidemenuRedirect",
+     "jsonPage": "viewRegistrationForm",
+     "fieldsToSend": [1],
+     "callFindOne": "event/findRegistration"
+ }]
 }

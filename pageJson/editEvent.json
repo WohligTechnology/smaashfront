@@ -13,7 +13,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Description",
         "type": "text",
         "tableRef": "description",
@@ -40,7 +40,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Schedule",
         "type": "text",
         "tableRef": "schedule",
@@ -49,7 +49,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Rules",
         "type": "text",
         "tableRef": "rule",
@@ -58,7 +58,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Team",
         "type": "text",
         "tableRef": "team",
@@ -67,7 +67,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Image",
         "type": "image",
         "tableRef": "image",
@@ -93,17 +93,16 @@
         "params": "_id"
     },
     "sidemenu": [{
-    "name":"Event Detail",
-    "action":"sidemenuRedirect",
-    "jsonPage":"editEvent",
-    "fieldsToSend":[1],
-    "callFindOne":"event/getOne"
-  },
-  {
-    "name":"Registrations",
-    "action":"sidemenuRedirect",
-    "jsonPage":"viewRegistrationForm",
-    "fieldsToSend":[1],
-    "callFindOne":"event/findRegistration"
-  }]
+        "name": "User Details",
+        "action": "sidemenuRedirect",
+        "jsonPage": "editUser",
+        "fieldsToSend": [1],
+        "callFindOne": "user/getOne"
+    }, {
+        "name": "Registration",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewRegistrationForm",
+        "fieldsToSend": [1],
+        "callFindOne": "event/findRegistration"
+    }]
 }
