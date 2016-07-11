@@ -22,6 +22,10 @@
                 <label>{{field.name}}</label>
                 <textarea style="height:100px;" ng-model="json.editData[field.model]" name="{{field.name}}" id="{{field.id}}"></textarea>
             </div>
+            <div ng-if="field.type=='date'">
+                <label>{{field.name}}</label>
+              <input ng-model="json.editData[field.model]" type="{{field.type}}" name="{{field.name}}" id="{{field.id}}">
+            </div>
             <!-- <div ng-if="field.type=='textarea'">
         <label>{{field.name}}</label>
         <textarea style="height:100px;" ng-model="json.editData[field.model]" name="{{field.name}}" id="{{field.id}}"></textarea>

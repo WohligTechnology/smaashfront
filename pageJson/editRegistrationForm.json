@@ -1,6 +1,6 @@
 {
     "title": "Edit Registration Form",
-    "jsonPage": "viewRegistrationForm",
+    "jsonPage": "viewEvent",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],

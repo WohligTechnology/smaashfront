@@ -24,7 +24,7 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editRegisrationForm",
+        "jsonPage": "editRegistrationForm",
         "fieldsToSend": ["_id"],
         "callFindOne": "event/saveRegistration"
     }, {
