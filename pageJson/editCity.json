@@ -53,6 +53,7 @@
         "name": "Image",
         "type": "image",
         "tableRef": "image",
+        "size":"162px X 132px",
         "placeholder": "Enter City Picture",
         "id": "input4",
         "validation": ["required", "trim", "unique"],

@@ -81,6 +81,7 @@
             <div ng-if="field.type=='image'">
                 <label for="">Upload Image</label>
                 <!-- <img ng-src="{{field.image|uploadpath}}"> -->
+                 <span style="float: right;">{{field.size}}</span>
                 <upload-image ng-model="json.editData[field.model]" no-view></upload-image>
             </div>
         </md-input-container>

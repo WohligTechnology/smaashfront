@@ -15,7 +15,7 @@
         "url": ""
     }, {
         "name": "Description",
-        "type": "text",
+        "type": "textarea",
         "tableRef": "description",
         "model": "description",
         "placeholder": "Enter description",

@@ -72,7 +72,7 @@
          }]
      },{
          "name": "Description",
-         "type": "text",
+         "type": "textarea",
          "tableRef": "description",
          "model": "description",
          "placeholder": "Enter description",
@@ -137,6 +137,7 @@
          "name": "Image",
          "type": "image",
          "tableRef": "image",
+         "size":"607px X 575px",
          "model": "image",
          "placeholder": "Enter City Picture",
          "id": "input4",
