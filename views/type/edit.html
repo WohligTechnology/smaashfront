@@ -79,8 +79,8 @@
             </div>
         </md-input-container>
         <md-list ng-cloak>
-            <md-list-item ng-repeat="field in json.fields">
-                <img ng-src="{{json.editData[field.model] | uploadpath:250:250:'fill'}}" class="edit-image" alt="{{json.editData[field.model]}}" ng-if="field.type=='image'" />
+            <md-list-item ng-if="field.type=='image'" ng-repeat="field in json.fields">
+                <img ng-src="{{json.editData[field.model] | uploadpath:250:250:'fill'}}" class="edit-image" alt="{{json.editData[field.model]}}"  />
             </md-list-item>
         </md-list>
         <!-- <md-list>
