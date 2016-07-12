@@ -156,7 +156,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 _.each($scope.json.fields, function(n) {
                     if (n.type == "table") {
                         $scope.subTableData = $scope.json.editData[n.model];
+                    }if (n.type == "time" || n.type == "date") {
+                        $scope.json.editData[n.model] = new Date($scope.json.editData[n.model]);
                     }
+
                 })
             }, function() {
                 console.log("Fail");

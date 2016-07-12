@@ -30,7 +30,7 @@
         "url": ""
     }, {
         "name": "Dob",
-        "type": "text",
+        "type": "date",
         "tableRef": "dob",
         "placeholder": "Enter dob",
         "id": "input5",

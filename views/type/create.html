@@ -9,7 +9,7 @@
             <div ng-if="field.type=='hidden'">
                 <input ng-model="field.model" type="{{field.type}}" name="{{field.name}}" id="{{field.id}}">
             </div>
-            <div ng-if="field.type=='text' || field.type=='email' || field.type=='password'">
+            <div ng-if="field.type=='text' || field.type=='email' || field.type=='password' || field.type=='date'">
                 <label>{{field.name}}</label>
                 <input ng-model="field.model" type="{{field.type}}" name="{{field.name}}" id="{{field.id}}">
             </div>

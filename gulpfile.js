@@ -38,7 +38,7 @@ var replacehostTo = "http://wohlig.co.in/demo2/";
 
 var ftpString = "U2FsdGVkX1+jcFED/CJbcYNiOJ42eBsjlxqmrcKWSIPH9Sao/4535zPQX5Fa7VYGAHSfkKCXbDpiUfJhkRRijaerS1lJ/k+dSfqsfl45ICkzMTJ7fBNVDj/242ur9ZG4HZDhSe1O/J4vEUboWDRBhg==";
 
-var uploadingFolder = "smaaashback";
+var uploadingFolder = "smashbackend";
 var password = "";
 
 
@@ -355,5 +355,5 @@ gulp.task('copy', ["copy:img", "copy:fonts"]);
 
 gulp.task('clearimage', ["clean:pImages", "clean:pFont"]);
 // gulp.task('production', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp', "concat:js", 'clean:tmp', "templatecache", "uglify:js","minify:css", 'clean:tmp', "inlinesource", 'clean:tmp', "gzipfile", 'clean:tmp', 'clean:tmp', "zip"));
-// gulp.task('productionc', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp', "concat:js", 'clean:tmp', "templatecache", "uglify:js","minify:css", 'clean:tmp', "inlinesource", 'clean:tmp','clean:production', "gzipfile", 'clean:tmp', 'clean:tmp', 'zip','deploy'));
+gulp.task('productionc', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp', "concat:js", 'clean:tmp', "templatecache", "uglify:js","minify:css", 'clean:tmp', "inlinesource", 'clean:tmp','clean:production', "gzipfile", 'clean:tmp', 'clean:tmp', 'zip','deploy'));
 gulp.task('production', gulpSequence(["copy:img","copy:pageJson", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp',  "concat:js", 'clean:tmp',"templatecache","uglify:js", "minify:css", 'clean:tmp', 'clean:tmp', "copy:indexhtml","copy:wjs","copy:wcss", 'clean:tmp', 'clean:tmp', "zip",'renamePHP','clean:indexHTML'));
