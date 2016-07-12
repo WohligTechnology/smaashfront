@@ -2,14 +2,20 @@
     "title": "All Timings",
     "desciption": "",
     "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
     "fields": [{
-        "name": "Title",
+        "name": "Type",
         "isSort": "",
-        "tableRef": "title"
+        "tableRef": "type"
     }, {
-        "name": "Order",
+        "name": "Weekday Price",
         "isSort": "",
-        "tableRef": "order"
+        "tableRef": "weekdayPrice"
+    }, {
+        "name": "Weekend Price",
+        "isSort": "",
+        "tableRef": "weekendPrice"
     }],
     "action": [{
         "name": "edit",
@@ -18,7 +24,7 @@
         "action": "redirect",
         "jsonPage": "editTiming",
         "fieldsToSend": ["_id"],
-        "callFindOne": "exploresmash/findOneTiming"
+        "callFindOne": "exploresmash/saveTiming"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -45,8 +51,21 @@
     }],
 
     "apiCall": {
-        "url": "exploresmash/findTiming",
-        "params": ""
+      "url": "exploresmash/findTiming",
+      "params": "_id"
     },
+    "sidemenu": [{
+        "name": "Exploresmash Details",
+        "action": "sidemenuRedirect",
+        "jsonPage": "editExploreSmash",
+        "fieldsToSend": [1],
+        "callFindOne": "exploresmash/getOne"
+    }, {
+        "name": "Timing",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewTiming",
+        "fieldsToSend": [1],
+        "callFindOne": "exploresmash/findTiming"
+    }],
     "createButtonState": "page({jsonName:'createTiming'})"
 }

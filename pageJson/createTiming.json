@@ -1,8 +1,9 @@
 {
     "title": "Create Timing",
-    "jsonPage": "viewTimings",
+    "jsonPage": "viewExploreSmash",
     "desciption": "",
     "pageType": "create",
+    "urlFields": ["exploresmash"],
     "fields": [{
         "name": "Type",
         "type": "text",
@@ -19,7 +20,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Weekday Price",
         "type": "text",
         "tableRef": "weekdayPrice",
@@ -27,7 +28,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Description",
         "type": "text",
         "tableRef": "description",
@@ -41,17 +42,10 @@
         "action": "submitTiming"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewTiming'})"
+        "stateName": "page({jsonName:'viewExploreSmash'})"
     }],
 
     "apiCall": {
         "url": "exploresmash/saveTiming"
-    },
-
-    "sidemenu": [{
-        "url": "",
-        "anchor": "",
-        "state": "",
-        "action": ""
-    }]
+    }
 }

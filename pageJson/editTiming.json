@@ -1,6 +1,6 @@
 {
     "title": "Edit Timing",
-    "jsonPage": "viewTimings",
+    "jsonPage": "viewExploreSmash",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -47,14 +47,14 @@
     }, {
         "name": "cancel",
         "action": "cancelTiming",
-        "stateName": "page({jsonName:'viewTiming'})"
+        "stateName": "page({jsonName:'viewExploreSmash'})"
     }],
     "apiCall": {
-        "url": "timing/saveTiming",
+        "url": "exploresmash/saveTiming",
         "params": "_id"
     },
     "preApi": {
-        "url": "timing/getOneTiming",
+        "url": "exploresmash/findOneTiming",
         "params": "_id"
     }
 }
