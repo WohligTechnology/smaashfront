@@ -3,6 +3,7 @@
     "jsonPage": "viewRegistrationForm",
     "desciption": "",
     "pageType": "create",
+    "urlFields": ["event"],
     "fields": [{
         "name": "Name",
         "type": "text",
@@ -41,17 +42,11 @@
         "action": "submitRegistrationForm"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewRegistrationForm'})"
+        "stateName": "page({jsonName:'viewEvent'})"
     }],
 
     "apiCall": {
-        "url": "event/saveRegistration"
-    },
-
-    "sidemenu": [{
-        "url": "",
-        "anchor": "",
-        "state": "",
-        "action": ""
-    }]
+        "url": "event/saveRegistration",
+        "params":"event"
+    }
 }

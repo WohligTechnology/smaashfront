@@ -205,10 +205,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                       // $scope.json.createButtonState = $scope.json.createButtonState.split("%25C2%").join("%C2%");
                       // $scope.json.createButtonState = $scope.json.createButtonState.split("%25A2").join("%A2");
                   }
-                  console.log($scope.json);
+                  console.log($scope.json.createButtonState);
                   $scope.api1 = $scope.json.sidemenu[1].callFindOne;
                   if ($scope.json.sidemenu[1].sendParam && $scope.json.sidemenu[1].sendParam !== '') {
                       // ARRAY
+                      // $scope.pagination1._id = urlid1;
                       $scope.pagination1._id = urlid1;
                       NavigationService.sideMenu1($scope.api1, $scope.pagination1, function(data) {
                           if (data.data.nominee) {
@@ -311,8 +312,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     $scope.makeReadyForApi = function() {
-        $scope.urlid = $location.absUrl().split('%C2%A2')[1];
-        $scope.urlid2 = $location.absUrl().split('%C2%A2')[2];
+      console.log("Make Ready");
+      console.log($scope.formData);
+
         var data = {};
         if ($scope.json.pageType !== 'edit' && $scope.json.pageType !== 'tableview') {
             // CONVERT MODEL NAMES SAME AS FIELD NAMES
@@ -322,7 +324,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
             $scope.formData = data;
             if (jsonArr[1]) {
-                $scope.formData._id = jsonArr[1];
+                $scope.formData[$scope.json.urlFields[0]] = jsonArr[1];
             }
         } else {
             $scope.formData = $scope.json.editData;
@@ -330,6 +332,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
 
         $scope.apiName = $scope.json.apiCall.url;
+
+        console.log($scope.formData);
 
         // CALL GENERAL API
         NavigationService.saveApi($scope.formData, $scope.apiName, function(data) {

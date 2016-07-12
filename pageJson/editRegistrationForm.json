@@ -47,7 +47,7 @@
     }, {
         "name": "cancel",
         "action": "cancelRegistrationForm",
-        "stateName": "page({jsonName:'viewRegistrationForm'})"
+        "stateName": "page({jsonName:'viewEvent'})"
     }],
     "apiCall": {
         "url": "event/saveRegistration",

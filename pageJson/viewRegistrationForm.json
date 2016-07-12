@@ -2,23 +2,24 @@
     "title": "",
     "desciption": "",
     "pageType": "view",
+    "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-            "name": "Name",
-            "isSort": "",
-            "tableRef": "name",
-            "type": ""
-        }, {
-            "name": "Email",
-            "isSort": "",
-            "tableRef": "email",
-            "type": ""
-        }, {
-            "name": "Phone",
-            "isSort": "",
-            "tableRef": "phone",
-            "type": ""
-        }],
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name",
+        "type": ""
+    }, {
+        "name": "Email",
+        "isSort": "",
+        "tableRef": "email",
+        "type": ""
+    }, {
+        "name": "Phone",
+        "isSort": "",
+        "tableRef": "phone",
+        "type": ""
+    }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
@@ -34,7 +35,7 @@
         "action": "apiCallConfirm",
         "title": "Delete User",
         "content": "Are you sure you want to delete event?",
-        "api": "event/delete",
+        "api": "event/deleteRegistration",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -46,17 +47,17 @@
     },
 
     "sidemenu": [{
-    "name":"Event Detail",
-    "action":"sidemenuRedirect",
-    "jsonPage":"editEvent",
-    "fieldsToSend":[1],
-    "callFindOne":"event/getOne"
-  },
-  {
-     "name": "Registration",
-     "action": "sidemenuRedirect",
-     "jsonPage": "viewRegistrationForm",
-     "fieldsToSend": [1],
-     "callFindOne": "event/findRegistration"
- }]
+        "name": "Event Detail",
+        "action": "sidemenuRedirect",
+        "jsonPage": "editEvent",
+        "fieldsToSend": [1],
+        "callFindOne": "event/getOne"
+    }, {
+        "name": "Registration",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewRegistrationForm",
+        "fieldsToSend": [1],
+        "callFindOne": "event/findRegistration"
+    }],
+    "createButtonState": "page({jsonName:'createRegistrationForm'})"
 }
