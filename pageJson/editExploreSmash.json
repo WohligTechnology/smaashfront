@@ -174,7 +174,20 @@
         "params": "_id"
     },
     "preApi": {
-        "url": "exploresmash/findOne",
+        "url": "exploresmash/getOne",
         "params": "_id"
-    }
+    },
+    "sidemenu": [{
+        "name": "Exploresmash Details",
+        "action": "sidemenuRedirect",
+        "jsonPage": "editUser",
+        "fieldsToSend": [1],
+        "callFindOne": "user/getOne"
+    }, {
+        "name": "Timing",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewRegistrationForm",
+        "fieldsToSend": [1],
+        "callFindOne": "event/findRegistration"
+    }]
 }

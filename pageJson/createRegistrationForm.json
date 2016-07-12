@@ -1,6 +1,6 @@
 {
     "title": "Create Registration Form",
-    "jsonPage": "viewRegistrationForm",
+    "jsonPage": "viewEvent",
     "desciption": "",
     "pageType": "create",
     "urlFields": ["event"],
