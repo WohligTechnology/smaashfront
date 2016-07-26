@@ -22,6 +22,8 @@ var jsArray = [
   "./bower_components/ace-builds/src-noconflict/ace.js",
   "./bower_components/ace-builds/src-noconflict/theme-monokai.js",
   "./bower_components/ace-builds/src-noconflict/mode-json.js",
+  "./bower_components/tinymce-dist/tinymce.js",
+  "./bower_components/angular-ui-tinymce/src/tinymce.js",
 
   "./js/app.js",
   "./js/controllers.js",
