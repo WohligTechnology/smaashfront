@@ -66,6 +66,12 @@
         "jsonPage": "viewTiming",
         "fieldsToSend": [1],
         "callFindOne": "exploresmash/findTiming"
+    }, {
+        "name": "Gallery Images",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewGallery",
+        "fieldsToSend": [1],
+        "callFindOne": "exploresmash/findGallery"
     }],
     "createButtonState": "page({jsonName:'createTiming'})"
 }

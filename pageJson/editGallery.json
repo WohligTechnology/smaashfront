@@ -5,15 +5,6 @@
     "pageType": "edit",
     "urlFields": ["_id"],
     "fields": [{
-        "name": "City Name",
-        "type": "selectFromTable",
-        "tableRef": "city",
-        "placeholder": "Enter name",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "city/getAll",
-        "model":"city"
-    }, {
         "name": "Order",
         "type": "text",
         "tableRef": "order",
@@ -42,11 +33,11 @@
         "stateName": "page({jsonName:'viewGallery'})"
     }],
     "apiCall": {
-        "url": "slider/save",
+        "url": "exploresmash/saveGallery",
         "params": "_id"
     },
     "preApi": {
-        "url": "slider/getOne",
+        "url": "exploresmash/findOneGallery",
         "params": "_id"
     }
 }

@@ -2,10 +2,12 @@
     "title": "All Gallery",
     "desciption": "",
     "pageType": "view",
+    "sendIdWithCreate": true,
     "fields": [{
-        "name": "City",
+        "name": "Image",
         "isSort": "",
-        "tableRef": "city.name"
+        "tableRef": "image",
+        "type":"image"
     }, {
         "name": "Order",
         "isSort": "",
@@ -18,15 +20,15 @@
         "action": "redirect",
         "jsonPage": "editGallery",
         "fieldsToSend": ["_id"],
-        "callFindOne": "slider/getOne"
+        "callFindOne": "exploresmash/getOneGallery"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
         "title": "Delete Gallery",
-        "content": "Are you sure you want to delete slider?",
-        "api": "slider/delete",
+        "content": "Are you sure you want to delete gallery?",
+        "api": "exploresmash/deleteGallery",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -45,8 +47,8 @@
     }],
 
     "apiCall": {
-        "url": "slider/findLimited",
-        "params": ""
+        "url": "exploresmash/findGallery",
+        "params": "_id"
     },
     "createButtonState": "page({jsonName:'createGallery'})"
 }

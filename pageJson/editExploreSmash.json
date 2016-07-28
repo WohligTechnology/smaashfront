@@ -205,5 +205,11 @@
         "jsonPage": "viewTiming",
         "fieldsToSend": [1],
         "callFindOne": "event/findRegistration"
+    }, {
+        "name": "Gallery",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewGallery",
+        "fieldsToSend": [1],
+        "callFindOne": "exploresmash/findLimitedGallery"
     }]
 }
