@@ -2,11 +2,8 @@
     "title": "All Config",
     "desciption": "",
     "pageType": "view",
-    "fields": [{
-        "name": "City",
-        "isSort": "",
-        "tableRef": "city.name"
-    }, {
+    "fields": [
+    {
         "name": "Url",
         "isSort": "",
         "tableRef": "url"

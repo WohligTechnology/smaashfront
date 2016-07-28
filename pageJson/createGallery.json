@@ -1,0 +1,50 @@
+{
+    "title": "Create Gallery",
+    "jsonPage": "viewGallery",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "City Name",
+        "type": "selectFromTable",
+        "tableRef": "city",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "city/getAll"
+    }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter order",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "size":"1920px X 738px",
+        "placeholder": "Enter City Picture",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitGallery"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'sliderView'})"
+    }],
+
+    "apiCall": {
+        "url": "slider/save"
+    },
+
+    "sidemenu": [{
+        "url": "",
+        "anchor": "",
+        "state": "",
+        "action": ""
+    }]
+}

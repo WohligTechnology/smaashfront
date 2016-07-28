@@ -19,7 +19,7 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "City Name",
         "type": "selectFromTable",
         "tableRef": "city",
@@ -27,7 +27,7 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "city/getAll"
-    },{
+    }, {
         "name": "Text",
         "type": "text",
         "tableRef": "text",
@@ -35,7 +35,21 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
+        "name": "Is Home",
+        "type": "select",
+        "tableRef": "isHome",
+        "placeholder": "Enter Is Home",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": true,
+            "name": "Yes"
+        }, {
+            "value": false,
+            "name": "No"
+        }]
+    }, {
         "name": "Image",
         "type": "image",
         "tableRef": "image",
@@ -43,110 +57,110 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-         "name": "Type",
-         "type": "select",
-         "tableRef": "type",
-         "placeholder": "Enter type",
-         "id": "input3",
-         "validation": ["required", "trim", "unique"],
-         "url": [{
-             "value": "What's new",
-             "name": "What's new"
-         }, {
-             "value": "Host a Party",
-             "name": "Host a Party"
-         }, {
-             "value": "Attraction",
-             "name": "Attraction"
-         }, {
-             "value": "Promotions",
-             "name": "Promotions"
-         }, {
-             "value": "Food and Beverages",
-             "name": "Food and Beverages"
-         }, {
-             "value": "Deals and Packages",
-             "name": "Deals and Packages"
-         }, {
-             "value": "Corporate Event",
-             "name": "Corporate Event"
-         }]
-     },{
-         "name": "Description",
-         "type": "textarea",
-         "tableRef": "description",
-         "placeholder": "Enter description",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Video Url",
-         "type": "text",
-         "tableRef": "video",
-         "placeholder": "Enter video",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Sub Link",
-         "type": "text",
-         "tableRef": "sublink",
-         "placeholder": "Enter sublink",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Technology",
-         "type": "text",
-         "tableRef": "technology",
-         "placeholder": "Enter technology",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Deals",
-         "type": "text",
-         "tableRef": "deal",
-         "placeholder": "Enter deal",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Promotion",
-         "type": "text",
-         "tableRef": "promotion",
-         "placeholder": "Enter promotion",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Current Event",
-         "type": "text",
-         "tableRef": "currentEvent",
-         "placeholder": "Enter current event",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Pdf",
-         "type": "image",
-         "tableRef": "pdf",
-         "placeholder": "Enter pdf",
-         "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Images",
-         "type": "image",
-         "tableRef": "images",
-         "size":"607px X 575px",
-         "placeholder": "Enter Picture",
-         "id": "input4",
-         "validation": ["required", "trim", "unique"],
-         "url": "",
-         "model":"images"
-     }],
+    }, {
+        "name": "Type",
+        "type": "select",
+        "tableRef": "type",
+        "placeholder": "Enter type",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "What's new",
+            "name": "What's new"
+        }, {
+            "value": "Host a Party",
+            "name": "Host a Party"
+        }, {
+            "value": "Attraction",
+            "name": "Attraction"
+        }, {
+            "value": "Promotions",
+            "name": "Promotions"
+        }, {
+            "value": "Food and Beverages",
+            "name": "Food and Beverages"
+        }, {
+            "value": "Deals and Packages",
+            "name": "Deals and Packages"
+        }, {
+            "value": "Corporate Event",
+            "name": "Corporate Event"
+        }]
+    }, {
+        "name": "Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "placeholder": "Enter description",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Video Url",
+        "type": "text",
+        "tableRef": "video",
+        "placeholder": "Enter video",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Sub Link",
+        "type": "text",
+        "tableRef": "sublink",
+        "placeholder": "Enter sublink",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Technology",
+        "type": "text",
+        "tableRef": "technology",
+        "placeholder": "Enter technology",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Deals",
+        "type": "text",
+        "tableRef": "deal",
+        "placeholder": "Enter deal",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Promotion",
+        "type": "text",
+        "tableRef": "promotion",
+        "placeholder": "Enter promotion",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Current Event",
+        "type": "text",
+        "tableRef": "currentEvent",
+        "placeholder": "Enter current event",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Pdf",
+        "type": "image",
+        "tableRef": "pdf",
+        "placeholder": "Enter pdf",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Images",
+        "type": "image",
+        "tableRef": "images",
+        "size": "607px X 575px",
+        "placeholder": "Enter Picture",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "images"
+    }],
     "action": [{
         "name": "submit",
         "action": "submitExploreSmash"
@@ -157,12 +171,5 @@
 
     "apiCall": {
         "url": "exploresmash/save"
-    },
-
-    "sidemenu": [{
-        "url": "",
-        "anchor": "",
-        "state": "",
-        "action": ""
-    }]
+    }
 }

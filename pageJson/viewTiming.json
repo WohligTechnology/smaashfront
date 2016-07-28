@@ -32,7 +32,7 @@
         "action": "apiCallConfirm",
         "title": "Delete Slider",
         "content": "Are you sure you want to delete timing?",
-        "api": "exploresmash/deleteSmash",
+        "api": "exploresmash/deleteTiming",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"

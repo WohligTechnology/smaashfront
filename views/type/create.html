@@ -16,7 +16,7 @@
 
             <div ng-if="field.type=='textarea'">
                 <label>{{field.name}}</label>
-                <textarea style="height:100px;" ng-model="field.model"  name="{{field.name}}" id="{{field.id}}"></textarea>
+                <textarea style="height:100px;" ng-model="field.model" name="{{field.name}}" id="{{field.id}}"></textarea>
             </div>
             <div ng-if="field.type=='tinymce'">
                 <label>{{field.name}}</label>
@@ -74,7 +74,7 @@
 
         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
             <md-button class="md-raised md-primary" ng-click="makeReadyForApi()" ng-class="{'disabled' : !plan.$valid }">Save</md-button>
-            <md-button class="md-raised md-warn" ui-sref="{{json.action[1].stateName}}">Cancel</md-button>
+            <md-button class="md-raised md-warn" ng-click="back()">Cancel</md-button>
         </section>
 
     </form>

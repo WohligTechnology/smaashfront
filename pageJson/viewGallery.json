@@ -1,5 +1,5 @@
 {
-    "title": "All ExploreSmash",
+    "title": "All Gallery",
     "desciption": "",
     "pageType": "view",
     "fields": [{
@@ -10,27 +10,23 @@
         "name": "Order",
         "isSort": "",
         "tableRef": "order"
-    }, {
-        "name": "Title",
-        "isSort": "",
-        "tableRef": "title"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editExploreSmash",
+        "jsonPage": "editGallery",
         "fieldsToSend": ["_id"],
-        "callFindOne": "exploresmash/findOne"
+        "callFindOne": "slider/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Explore Smash",
-        "content": "Are you sure you want to delete explore smash?",
-        "api": "exploresmash/delete",
+        "title": "Delete Gallery",
+        "content": "Are you sure you want to delete slider?",
+        "api": "slider/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -49,8 +45,8 @@
     }],
 
     "apiCall": {
-        "url": "exploresmash/findLimited",
+        "url": "slider/findLimited",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createExploreSmash'})"
+    "createButtonState": "page({jsonName:'createGallery'})"
 }

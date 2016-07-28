@@ -2,7 +2,7 @@ var adminURL = "http://wohlig.io:81/";
 // window.uploadurl = "http://192.168.1.122:81/" + "upload/";
 var mockURL = adminURL + "callApi/";
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ngSanitize', 'ngMaterial', 'ngMdIcons', 'ui.sortable', 'angular-clipboard', 'imageupload', 'ui.bootstrap','ui.tinymce'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ngSanitize', 'ngMaterial', 'ngMdIcons', 'ui.sortable', 'angular-clipboard', 'imageupload', 'ui.bootstrap', 'ui.tinymce'])
 
 .controller('LoginCtrl', function($scope, TemplateService, NavigationService, $timeout, $state) {
     $scope.menutitle = NavigationService.makeactive("Login");
@@ -42,6 +42,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('jsonViewCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $http, $state, $filter, $mdDialog, $location) {
     //Used to name the .html file
+
+    $scope.back = function() {
+        window.history.back();
+    };
     $scope.template = TemplateService.changecontent("users");
     $scope.menutitle = NavigationService.makeactive("Users");
     TemplateService.title = $scope.menutitle;
@@ -156,7 +160,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 _.each($scope.json.fields, function(n) {
                     if (n.type == "table") {
                         $scope.subTableData = $scope.json.editData[n.model];
-                    }if (n.type == "time" || n.type == "date") {
+                    }
+                    if (n.type == "time" || n.type == "date") {
                         $scope.json.editData[n.model] = new Date($scope.json.editData[n.model]);
                     }
 
@@ -197,45 +202,45 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             };
 
             // SIDE MENU DATA
-              var urlid1 = $location.absUrl().split('%C2%A2')[1];
-              console.log(urlid1);
-              // var urlid2 = $location.absUrl().split('%C2%A2')[2];
-              $scope.pagination1 = {};
-              if (urlid1) {
-                  console.log('urlid1', urlid1);
-                  if ($scope.json.sendIdWithCreate) {
-                      $scope.json.createButtonState = $scope.json.createButtonState.split("'" + "})").join("¢" + urlid1 + "'" + "})");
-                      // $scope.json.createButtonState = $scope.json.createButtonState.split("%25C2%").join("%C2%");
-                      // $scope.json.createButtonState = $scope.json.createButtonState.split("%25A2").join("%A2");
-                  }
-                  console.log($scope.json.createButtonState);
-                  $scope.api1 = $scope.json.sidemenu[1].callFindOne;
-                  if ($scope.json.sidemenu[1].sendParam && $scope.json.sidemenu[1].sendParam !== '') {
-                      // ARRAY
-                      // $scope.pagination1._id = urlid1;
-                      $scope.pagination1._id = urlid1;
-                      NavigationService.sideMenu1($scope.api1, $scope.pagination1, function(data) {
-                          if (data.data.nominee) {
-                              $scope.json.tableData = data.data;
-                              console.log("IF");
-                              console.log($scope.json.tableData);
-                          }
-                      }, function() {
-                          console.log("fail");
-                      });
-                  } else {
-                      console.log("ELSE");
-                      $scope.pagination._id = urlid1;
-                      NavigationService.sideMenu1($scope.api1, $scope.pagination, function(data) {
-                          $scope.json.tableData = data.data.data;
-                          console.log($scope.json.tableData);
-                      }, function() {
-                          console.log("fail");
-                      });
-                  }
-              }
-              // call api for view data
-              $scope.apiName = $scope.json.apiCall.url;
+            var urlid1 = $location.absUrl().split('%C2%A2')[1];
+            console.log(urlid1);
+            // var urlid2 = $location.absUrl().split('%C2%A2')[2];
+            $scope.pagination1 = {};
+            if (urlid1) {
+                console.log('urlid1', urlid1);
+                if ($scope.json.sendIdWithCreate) {
+                    $scope.json.createButtonState = $scope.json.createButtonState.split("'" + "})").join("¢" + urlid1 + "'" + "})");
+                    // $scope.json.createButtonState = $scope.json.createButtonState.split("%25C2%").join("%C2%");
+                    // $scope.json.createButtonState = $scope.json.createButtonState.split("%25A2").join("%A2");
+                }
+                console.log($scope.json.createButtonState);
+                $scope.api1 = $scope.json.sidemenu[1].callFindOne;
+                if ($scope.json.sidemenu[1].sendParam && $scope.json.sidemenu[1].sendParam !== '') {
+                    // ARRAY
+                    // $scope.pagination1._id = urlid1;
+                    $scope.pagination1._id = urlid1;
+                    NavigationService.sideMenu1($scope.api1, $scope.pagination1, function(data) {
+                        if (data.data.nominee) {
+                            $scope.json.tableData = data.data;
+                            console.log("IF");
+                            console.log($scope.json.tableData);
+                        }
+                    }, function() {
+                        console.log("fail");
+                    });
+                } else {
+                    console.log("ELSE");
+                    $scope.pagination._id = urlid1;
+                    NavigationService.sideMenu1($scope.api1, $scope.pagination, function(data) {
+                        $scope.json.tableData = data.data.data;
+                        console.log($scope.json.tableData);
+                    }, function() {
+                        console.log("fail");
+                    });
+                }
+            }
+            // call api for view data
+            $scope.apiName = $scope.json.apiCall.url;
             $scope.pageInfo = {};
             $scope.getMoreResults = function() {
                 NavigationService.findProjects($scope.apiName, $scope.pagination, function(findData) {
@@ -315,8 +320,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     $scope.makeReadyForApi = function() {
-      console.log("Make Ready");
-      console.log($scope.formData);
+        console.log("Make Ready");
+        console.log($scope.formData);
 
         var data = {};
         if ($scope.json.pageType !== 'edit' && $scope.json.pageType !== 'tableview') {
@@ -340,21 +345,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         // CALL GENERAL API
         NavigationService.saveApi($scope.formData, $scope.apiName, function(data) {
-
-            console.log($scope.json.jsonPage);
-
-            // showToast("Project Saved Successfully");
-            console.log("Success");
-            if ($scope.json.action[0].submitUrl && $scope.urlid && !$scope.urlid2) {
-                $location.url("/page/" + $scope.json.action[0].submitUrl + $scope.urlid);
-
-            } else if ($scope.json.action[0].submitUrl && $scope.urlid2) {
-                $location.url("/page/" + $scope.json.action[0].submitUrl + $scope.urlid2);
-            } else {
-                $state.go("page", {
-                    jsonName: $scope.json.jsonPage
-                });
-            }
+            window.history.back();
+            // console.log($scope.json.jsonPage);
+            //
+            // // showToast("Project Saved Successfully");
+            // console.log("Success");
+            // if ($scope.json.action[0].submitUrl && $scope.urlid && !$scope.urlid2) {
+            //     $location.url("/page/" + $scope.json.action[0].submitUrl + $scope.urlid);
+            //
+            // } else if ($scope.json.action[0].submitUrl && $scope.urlid2) {
+            //     $location.url("/page/" + $scope.json.action[0].submitUrl + $scope.urlid2);
+            // } else {
+            //     $state.go("page", {
+            //         jsonName: $scope.json.jsonPage
+            //     });
+            // }
 
         }, function() {
             // showToast("Error saving the Project");
