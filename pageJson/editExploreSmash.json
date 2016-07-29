@@ -55,6 +55,24 @@
             "value": false,
             "name": "No"
         }]
+    }, {
+        "name": "Banner",
+        "type": "image",
+        "tableRef": "banner",
+        "placeholder": "Enter City Picture",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size":"5067 x 3634px"
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "size": "767 x 551 px",
+        "placeholder": "Enter Picture",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     },{
          "name": "Type",
          "type": "select",
@@ -149,31 +167,12 @@
          "validation": ["required", "trim", "unique"],
          "url": ""
      },{
-         "name": "Image",
-         "type": "image",
-         "tableRef": "image",
-         "size":"607px X 575px",
-         "model": "image",
-         "placeholder": "Enter City Picture",
-         "id": "input4",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
          "name": "Pdf",
          "type": "image",
          "tableRef": "pdf",
          "model": "pdf",
          "placeholder": "Enter pdf",
          "id": "input5",
-         "validation": ["required", "trim", "unique"],
-         "url": ""
-     },{
-         "name": "Images",
-         "type": "image",
-         "tableRef": "images",
-         "model": "images",
-         "placeholder": "Enter City Picture",
-         "id": "input4",
          "validation": ["required", "trim", "unique"],
          "url": ""
      }],
