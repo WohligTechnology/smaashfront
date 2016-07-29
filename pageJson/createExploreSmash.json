@@ -154,7 +154,7 @@
         "url": ""
     }, {
         "name": "Pdf",
-        "type": "image",
+        "type": "pdf",
         "tableRef": "pdf",
         "placeholder": "Enter pdf",
         "id": "input5",
