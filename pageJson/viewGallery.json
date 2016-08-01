@@ -50,5 +50,24 @@
         "url": "exploresmash/findGallery",
         "params": "_id"
     },
-    "createButtonState": "page({jsonName:'createGallery'})"
+    "createButtonState": "page({jsonName:'createGallery'})",
+    "sidemenu": [{
+        "name": "Exploresmash Details",
+        "action": "sidemenuRedirect",
+        "jsonPage": "editExploreSmash",
+        "fieldsToSend": [1],
+        "callFindOne": "exploresmash/getOne"
+    }, {
+        "name": "Timing",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewTiming",
+        "fieldsToSend": [1],
+        "callFindOne": "exploresmash/findTiming"
+    }, {
+        "name": "Gallery Images",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewGallery",
+        "fieldsToSend": [1],
+        "callFindOne": "exploresmash/findGallery"
+    }]
 }

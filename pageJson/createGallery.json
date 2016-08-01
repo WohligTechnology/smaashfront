@@ -3,12 +3,13 @@
     "jsonPage": "viewGallery",
     "desciption": "",
     "pageType": "create",
+        "urlFields": ["explore"],
     "fields": [{
         "name": "Order",
         "type": "text",
         "tableRef": "order",
         "placeholder": "Enter order",
-        "id": "input5",
+        "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
@@ -23,20 +24,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitGallery"
+        "action": "submitTiming"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'exploresmashView'})"
+        "stateName": "page({jsonName:'viewExploreSmash'})"
     }],
 
     "apiCall": {
         "url": "exploresmash/saveGallery"
-    },
-
-    "sidemenu": [{
-        "url": "",
-        "anchor": "",
-        "state": "",
-        "action": ""
-    }]
+    }
 }
