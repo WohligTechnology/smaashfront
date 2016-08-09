@@ -1,5 +1,5 @@
-var adminurl = "http://104.197.84.255/";
-// var adminurl = "http://localhost:1337/";
+var adminurl = "http://192.168.0.118:1337/";
+ //var adminurl = "http://localhost:1337/";
 var imgurl = adminurl + "upload/";
 var uploadurl = imgurl;
 var imgpath = imgurl + "readFile";
@@ -51,6 +51,11 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "#/page/viewEvent",
         subnav: []
+    }, {
+        name: "Type",
+        classis: "active",
+        link: "#/page/viewType",
+        subnav: []
     }];
 
     return {
@@ -71,7 +76,7 @@ var navigationservice = angular.module('navigationservice', [])
             $http.post(adminurl + apiName, data).success(successCallback).error(errorCallback);
         },
         deleteProject: function(data, successCallback, errorCallback) {
-            $http.post(adminURL + "project/delete", data).success(successCallback).error(errorCallback);
+            $http.post(adminurl + "project/delete", data).success(successCallback).error(errorCallback);
         },
         findProjects: function(apiName, pagination, successCallback, errorCallback) {
             $http.post(adminurl + apiName, pagination).success(successCallback).error(errorCallback);
