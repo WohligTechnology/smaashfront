@@ -7,6 +7,11 @@
         "name": "Url",
         "isSort": "",
         "tableRef": "url"
+    },{
+        "name": "Image",
+        "isSort": "",
+        "tableRef": "image",
+        "type":"image"
     }],
     "action": [{
         "name": "edit",

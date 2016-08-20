@@ -4,16 +4,7 @@
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
-    "fields": [{
-        "name": "City Name",
-        "type": "selectFromTable",
-        "tableRef": "city",
-        "placeholder": "Enter name",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "city/getAll",
-        "model":"city"
-    }, {
+    "fields": [ {
         "name": "Url",
         "type": "text",
         "tableRef": "url",
@@ -22,6 +13,14 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model":"url"
+    },{
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "model": "image",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size":""
     }],
     "action": [{
         "name": "submit",
