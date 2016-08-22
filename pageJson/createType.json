@@ -1,0 +1,33 @@
+{
+    "title": "Create Type",
+    "jsonPage": "viewType",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter order",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitType"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewType'})"
+    }],
+    "apiCall": {
+        "url": "type/saveData"
+    }
+}

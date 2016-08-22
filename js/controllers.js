@@ -203,7 +203,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.pagination = {
                 "search": "",
                 "pagenumber": 1,
-                "pagesize": 10
+                "pagesize": 5
             };
 
             // SIDE MENU DATA
@@ -248,7 +248,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.getMoreResults = function() {
                 NavigationService.findProjects($scope.apiName, $scope.pagination, function(findData) {
                     console.log(findData);
-                    if (findData.value != false) {
+                    if (findData.value !== false) {
                         if (findData.data && findData.data.data && findData.data.data.length > 0) {
                             $scope.pageInfo.lastpage = findData.data.totalpages;
                             $scope.pageInfo.pagenumber = findData.data.pagenumber;
