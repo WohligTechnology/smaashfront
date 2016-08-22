@@ -1,8 +1,7 @@
-var adminurl = "http://104.154.89.21:82/";
-// var adminurl = "http://localhost:1337/";
-var imgurl = adminurl + "upload/";
-var uploadurl = imgurl;
-var imgpath = imgurl + "readFile";
+// var adminurl = "http://104.154.89.21:82/";
+var adminurl = "http://localhost:1337/";
+var uploadurl = adminurl + "upload/";
+var imgpath = uploadurl + "readFile";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {

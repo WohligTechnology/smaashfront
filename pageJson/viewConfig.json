@@ -8,9 +8,9 @@
         "isSort": "",
         "tableRef": "url"
     },{
-        "name": "Image",
+        "name": "Home Page Banner",
         "isSort": "",
-        "tableRef": "image",
+        "tableRef": "homebanner",
         "type":"image"
     }],
     "action": [{

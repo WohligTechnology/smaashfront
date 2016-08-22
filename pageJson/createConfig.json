@@ -12,9 +12,9 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Image",
+        "name": "Home Page Banner",
         "type": "image",
-        "tableRef": "image",
+        "tableRef": "homebanner",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "size":""

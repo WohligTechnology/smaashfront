@@ -14,10 +14,10 @@
         "url": "",
         "model":"url"
     },{
-        "name": "Image",
+        "name": "Home Page Banner",
         "type": "image",
-        "tableRef": "image",
-        "model": "image",
+        "tableRef": "homebanner",
+        "model": "homebanner",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "size":""

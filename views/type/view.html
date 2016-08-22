@@ -15,8 +15,13 @@
         </div>
         <md-list-item ng-show="json.tableData.length>=0" ng-repeat="result in json.tableData track by $index" class="secondary-button-padding padlr16">
             <p ng-repeat="field in json.fields">
-                <span ng-if="field.type!='image'">{{result|getValue:field.tableRef:field.type}}</span>
+                <!-- <span ng-if="field.type!='image'">{{result|getValue:field.tableRef:field.type}}</span>
                 <span class="img-holder">
+                <img ng-src="{{result|getValue:field.tableRef:field.type}}" alt="" ng-if="field.type=='image'">
+            </span> -->
+            <span ng-if="field.type!='image' && result|getValue:field.tableRef:field.type!=''">{{result|getValue:field.tableRef:field.type}}</span>
+            <span ng-if="field.type!='image' && result|getValue:field.tableRef:field.type ==''"></span>
+            <span class="img-holder">
                 <img ng-src="{{result|getValue:field.tableRef:field.type}}" alt="" ng-if="field.type=='image'">
             </span>
             </p>
