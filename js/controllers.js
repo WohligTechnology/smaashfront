@@ -203,7 +203,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.pagination = {
                 "search": "",
                 "pagenumber": 1,
-                "pagesize": 5
+                "pagesize": 20
             };
 
             // SIDE MENU DATA
