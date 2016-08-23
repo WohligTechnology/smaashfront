@@ -230,7 +230,7 @@
          "url": ""
      },   {
             "name": "Home Text",
-            "type": "text",
+            "type": "tinymce",
             "tableRef": "hometext",
             "model": "hometext",
             "placeholder": "Enter text for home slider",

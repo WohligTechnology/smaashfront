@@ -200,7 +200,7 @@
          },
          {
              "name": "Home Text",
-             "type": "text",
+             "type": "tinymce",
              "tableRef": "hometext",
              "placeholder": "Enter text for home slider",
              "id": "input5",

@@ -20,7 +20,7 @@
             </div>
             <div ng-if="field.type=='tinymce'">
                 <label>{{field.name}}</label>
-                <textarea style="height:100px;" ng-model="json.editData[field.model]" ui-tinymce name="{{field.name}}" id="{{field.id}}"></textarea>
+                <textarea style="height:100px;" ng-model="json.editData[field.model]" ui-tinymce ></textarea>
             </div>
             <div ng-if="field.type=='date'">
 
