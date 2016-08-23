@@ -28,23 +28,45 @@
             </div>
             <!-- // SELECT FROM TABLE-->
             <!-- // SELECT -->
-            <div ng-if="field.type=='selectFromTable'">
+            <!-- <div ng-if="field.type=='selectFromTable'">
                 <label for="{{field.id}}">{{field.name}} </label>
 
                 <br>
                 <div class="input-field">
                     <select style="width: 100%;border: none;background: #fff;border-bottom: 1px solid rgb(225, 225, 225);margin-top: 10px; padding2px;" ng-model="field.model">
-                        <!-- <div ng-if="field.type"> -->
-
                         <option value="">SELECT</option>
-                        <!-- </div> -->
                         <option ng-repeat="item in field.dropdownvalues track by $index" value="{{item._id}}">
                             {{item.name}}
                         </option>
                     </select>
                 </div>
                 <br>
-            </div>
+            </div> -->
+            <div ng-if="field.type=='selectFromTable'">
+         <label for="{{field.id}}">{{field.name}} </label>
+         <br>
+         <div ng-if="field.option=='multiple'">
+           <md-select ng-model="field.model" multiple>
+             <md-optgroup>
+               <md-option value="{{item._id}}" ng-repeat="item in field.dropdownvalues track by $index">{{item.name}}</md-option>
+             </md-optgroup>
+           </md-select>
+         </div>
+         <div ng-if="field.option=='single'">
+           <md-select ng-model="field.model">
+             <md-optgroup>
+               <md-option value="{{item._id}}" ng-repeat="item in field.dropdownvalues track by $index">{{item.name}}</md-option>
+             </md-optgroup>
+           </md-select>
+         </div>
+         <br>
+       </div>
+            <div ng-if="field.type=='chips'" ng-init="field.model=[]">
+              <span ng-if="field.givecomment && field.givecomment !=''">{{field.givecomment}}</span>
+          <label for="">{{field.name}}</label>
+          <md-chips ng-model="field.model" placeholder="Enter a text"></md-chips>
+          <br/>
+      </div>
             <!-- // SELECT FROM TABLE-->
             <div ng-if="field.type=='select'">
                 <label for="{{field.id}}">{{field.name}} </label>

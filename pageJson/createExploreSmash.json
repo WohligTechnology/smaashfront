@@ -22,6 +22,7 @@
     }, {
         "name": "City Name",
         "type": "selectFromTable",
+        "option": "multiple",
         "tableRef": "city",
         "placeholder": "Enter name",
         "id": "input1",
@@ -160,7 +161,52 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    }],
+    },     {
+             "name": "Facebook Link",
+             "type": "text",
+             "tableRef": "fb",
+             "placeholder": "Enter facebook link",
+             "id": "input5",
+             "validation": ["required", "trim", "unique"],
+             "url": ""
+         },
+         {
+             "name": "Twitter Link",
+             "type": "text",
+             "tableRef": "twitter",
+             "placeholder": "Enter twitter link",
+             "id": "input5",
+             "validation": ["required", "trim", "unique"],
+             "url": ""
+         },
+         {
+             "name": "Google Link",
+             "type": "text",
+             "tableRef": "google",
+             "placeholder": "Enter google link",
+             "id": "input5",
+             "validation": ["required", "trim", "unique"],
+             "url": ""
+         },
+         {
+             "name": "Game For",
+             "type": "chips",
+              "givecomment": "Eg. male,female,children",
+             "tableRef": "gamefor",
+             "placeholder": "Enter google link",
+             "id": "input5",
+             "validation": ["required", "trim", "unique"],
+             "url": ""
+         },
+         {
+             "name": "Home Text",
+             "type": "text",
+             "tableRef": "hometext",
+             "placeholder": "Enter text for home slider",
+             "id": "input5",
+             "validation": ["required", "trim", "unique"],
+             "url": ""
+         }],
     "action": [{
         "name": "submit",
         "action": "submitExploreSmash"

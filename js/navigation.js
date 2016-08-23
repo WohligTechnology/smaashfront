@@ -1,5 +1,5 @@
-// var adminurl = "http://104.154.89.21:82/";
-var adminurl = "http://localhost:1337/";
+var adminurl = "http://104.154.89.21:82/";
+// var adminurl = "http://localhost:1337/";
 var uploadurl = adminurl + "upload/";
 var imgpath = uploadurl + "readFile";
 var navigationservice = angular.module('navigationservice', [])
@@ -49,6 +49,11 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Events",
         classis: "active",
         link: "#/page/viewEvent",
+        subnav: []
+    }, {
+        name: "Subscribe",
+        classis: "active",
+        link: "#/page/viewSubscribe",
         subnav: []
     }];
 

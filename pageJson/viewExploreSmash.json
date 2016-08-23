@@ -10,10 +10,6 @@
         "name": "Type",
         "isSort": "",
         "tableRef": "type"
-    },{
-        "name": "City",
-        "isSort": "",
-        "tableRef": "city.name"
     }, {
         "name": "Order",
         "isSort": "",

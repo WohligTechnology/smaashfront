@@ -32,9 +32,14 @@
                 <label>{{field.name}}</label>
                 <input ng-model="json.editData[field.model]" type="text" readonly="true" name="{{field.name}}" id="{{field.id}}">
             </div>
-
+            <div ng-if="field.type=='chips'">
+                  <span ng-if="field.givecomment && field.givecomment !=''">{{field.givecomment}}</span>
+                    <label for="">{{field.name}}</label>
+                    <md-chips ng-model="json.editData[field.model]" ng-if="json.editData[field.model]"></md-chips>
+                    <br/>
+                </div>
             <!-- // SELECT -->
-            <div ng-if="field.type=='selectFromTable'">
+            <!-- <div ng-if="field.type=='selectFromTable'">
 
                 <label for="{{field.id}}">{{field.name}}</label>
                 <br>
@@ -45,7 +50,7 @@
                     </option>
                 </select>
                 <br>
-            </div>
+            </div> -->
 
             <!-- // SELECT FROM TABLE-->
             <div ng-if="field.type=='select'">
