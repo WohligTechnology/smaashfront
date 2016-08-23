@@ -99,7 +99,7 @@
         }]
     }, {
         "name": "Description",
-        "type": "textarea",
+        "type": "tinymce",
         "tableRef": "description",
         "placeholder": "Enter description",
         "id": "input5",
@@ -123,7 +123,7 @@
         "url": ""
     }, {
         "name": "Technology",
-        "type": "text",
+        "type": "tinymce",
         "tableRef": "technology",
         "placeholder": "Enter technology",
         "id": "input5",
@@ -139,7 +139,7 @@
         "url": ""
     }, {
         "name": "Promotion",
-        "type": "text",
+        "type": "tinymce",
         "tableRef": "promotion",
         "placeholder": "Enter promotion",
         "id": "input5",
