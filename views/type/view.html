@@ -9,6 +9,14 @@
                 <ng-md-icon class="" icon="{{action.icon}}" size="20" style="fill:black;"></ng-md-icon>
             </md-button>
         </md-list-item>
+        <a ui-sref="{{json.createButtonState}}" ng-if="json.createButtonState">
+            <!-- <a ui-sref="{{json.create.createButtonState}}" ng-if="json.create"> -->
+            <md-button class="md-fab md-fab-bottom-right md-primary" aria-label="Add Users">
+                <md-icon class="fa fa-plus plus-icon"></md-icon>
+            </md-button>
+        </a>
+
+
 
         <div ng-hide="json.tableData.length>=0 || json.tableData.cart.length>=0" class="loadingbox">
             Loading...

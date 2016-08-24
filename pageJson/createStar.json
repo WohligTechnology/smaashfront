@@ -11,6 +11,14 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
+    },{
+        "name": "Video Url",
+        "type": "text",
+        "tableRef": "url",
+        "placeholder": "Enter url",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }, {
         "name": "Order",
         "type": "text",
@@ -28,6 +36,14 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "image"
+    },{
+        "name": "Description",
+        "type": "textarea",
+        "tableRef": "text",
+        "placeholder": "Enter text",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }],
     "action": [{
         "name": "submit",

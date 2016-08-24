@@ -14,6 +14,15 @@
         "url": "",
         "model": "_id"
     },{
+        "name": "Video Url",
+        "type": "text",
+        "tableRef": "url",
+        "model": "url",
+        "placeholder": "Enter url",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
       "name": "Star Name",
       "type": "text",
       "tableRef": "title",
@@ -40,6 +49,15 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "image"
+    },{
+        "name": "Description",
+        "type": "textarea",
+        "model": "text",
+        "tableRef": "text",
+        "placeholder": "Enter text",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }],
     "action": [{
         "name": "submit",
