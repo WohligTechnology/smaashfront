@@ -60,6 +60,11 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "#/page/viewType",
         subnav: []
+    }, {
+        name: "Assistance Form",
+        classis: "active",
+        link: "#/page/viewAssistance",
+        subnav: []
     }];
 
     return {

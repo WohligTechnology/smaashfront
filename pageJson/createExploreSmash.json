@@ -37,7 +37,7 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Is Home",
+        "name": "Show Home",
         "type": "select",
         "tableRef": "isHome",
         "placeholder": "Enter Is Home",
