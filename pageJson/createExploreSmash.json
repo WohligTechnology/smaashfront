@@ -70,33 +70,12 @@
         "url": ""
     }, {
         "name": "Type",
-        "type": "select",
+        "type": "selectFromTable",
         "tableRef": "type",
         "placeholder": "Enter type",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
-        "url": [{
-            "value": "What's new",
-            "name": "What's new"
-        }, {
-            "value": "Host a Party",
-            "name": "Host a Party"
-        }, {
-            "value": "Attraction",
-            "name": "Attraction"
-        }, {
-            "value": "Promotions",
-            "name": "Promotions"
-        }, {
-            "value": "Food and Beverages",
-            "name": "Food and Beverages"
-        }, {
-            "value": "Deals and Packages",
-            "name": "Deals and Packages"
-        }, {
-            "value": "Corporate Event",
-            "name": "Corporate Event"
-        }]
+        "url": "user/getall"
     }, {
         "name": "Description",
         "type": "tinymce",

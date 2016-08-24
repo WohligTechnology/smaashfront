@@ -9,7 +9,7 @@
     }, {
         "name": "Type",
         "isSort": "",
-        "tableRef": "type"
+        "tableRef": "type.name"
     }, {
         "name": "Order",
         "isSort": "",
