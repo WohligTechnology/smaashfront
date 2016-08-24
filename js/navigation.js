@@ -16,7 +16,7 @@ var navigationservice = angular.module('navigationservice', [])
         link: "#/page/viewCity",
         subnav: []
     }, {
-        name: "Slider",
+        name: "Home Page Slider",
         classis: "active",
         link: "#/page/viewSlider",
         subnav: []
