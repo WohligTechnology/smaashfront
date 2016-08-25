@@ -13,6 +13,16 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "_id"
+    }, {
+        "name": "City Name",
+        "type": "selectFromTable",
+        "option": "multiple",
+        "tableRef": "city",
+        "model": "city",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "city/getAll"
     },{
         "name": "Video Url",
         "type": "text",

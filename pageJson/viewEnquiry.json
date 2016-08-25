@@ -1,5 +1,5 @@
 {
-    "title": "All Users",
+    "title": "All Enquiry",
     "desciption": "",
     "pageType": "view",
     "fields": [{
@@ -10,6 +10,19 @@
         "name": "Email",
         "isSort": "",
         "tableRef": "email"
+    }, {
+        "name": "Mobile",
+        "isSort": "",
+        "tableRef": "mobile"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editEnquiry",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "enquiry/findOne"
     }],
     "button": [{
         "name": "excelexport",
@@ -24,8 +37,7 @@
     }],
 
     "apiCall": {
-        "url": "signup/findLimited",
+        "url": "enquiry/findLimited",
         "params": ""
     }
-
 }

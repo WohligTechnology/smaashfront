@@ -6,7 +6,7 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
     var navigation = [{
-        name: "Users",
+        name: "Signed Up Users",
         classis: "active",
         link: "#/page/userView",
         subnav: []
@@ -41,7 +41,7 @@ var navigationservice = angular.module('navigationservice', [])
         link: "#/page/viewRechargeSmaashCard",
         subnav: []
     }, {
-        name: "Stars",
+        name: "Stars at Smaaash",
         classis: "active",
         link: "#/page/viewStars",
         subnav: []
@@ -64,6 +64,11 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Assistance Form",
         classis: "active",
         link: "#/page/viewAssistance",
+        subnav: []
+    }, {
+        name: "Enquiry",
+        classis: "active",
+        link: "#/page/viewEnquiry",
         subnav: []
     }];
 

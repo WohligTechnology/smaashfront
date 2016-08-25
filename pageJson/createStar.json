@@ -3,7 +3,16 @@
     "jsonPage": "viewStars",
     "desciption": "",
     "pageType": "create",
-    "fields": [{
+    "fields": [ {
+        "name": "City Name",
+        "type": "selectFromTable",
+        "option": "multiple",
+        "tableRef": "city",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "city/getAll"
+    },{
         "name": "Star Name",
         "type": "text",
         "tableRef": "title",

@@ -45,7 +45,7 @@
     }],
 
     "apiCall": {
-        "url": "star/findLimited",
+        "url": "star/findLimitedForBackend",
         "params": ""
     },
     "createButtonState": "page({jsonName:'createStar'})"

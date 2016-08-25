@@ -16,12 +16,28 @@
     },{
         "name": "City Name",
         "type": "selectFromTable",
+          "option":"multiple",
         "tableRef": "city",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "city/getAll",
         "model":"city"
+    },{
+        "name": "Type",
+        "type": "select",
+        "tableRef": "type",
+        "model": "type",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+          "name":"Home Page",
+          "value":1
+          },{
+            "name":"Host a Party",
+            "value":2
+            }]
     }, {
         "name": "Order",
         "type": "text",
